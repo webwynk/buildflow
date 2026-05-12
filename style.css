@@ -47,6 +47,23 @@ h4 {
     line-height: 1.15;
 }
 
+/* ─── SECTION PADDING ─── */
+section {
+    padding: 120px 0;
+}
+
+@media (max-width: 900px) {
+    section {
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 50px 0;
+    }
+}
+
 /* ─── GRID OVERLAY ─── */
 body::before {
     content: '';
@@ -62,9 +79,9 @@ body::before {
 
 .container {
     width: 100%;
-    max-width: 1180px;
+    max-width: 1240px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 20px;
     position: relative;
     z-index: 1;
 }
@@ -87,11 +104,12 @@ nav.scrolled {
 }
 
 .nav-inner {
-    max-width: 1180px;
+    max-width: 1240px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     gap: 32px;
+    padding: 0 20px;
     height: 68px;
 }
 
@@ -265,7 +283,6 @@ nav.scrolled {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 80px 0px;
     position: relative;
     overflow: hidden;
 }
@@ -1273,7 +1290,7 @@ section {
 
 .tc-social {
     color: var(--muted);
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     width: 32px;
     height: 32px;
     border-radius: 8px;
