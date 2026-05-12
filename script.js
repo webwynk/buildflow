@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })[0];
 
     // Button Navigation
-    const slideAmount = 680; // Match new standard card width + gap
+    const slideAmount = 420; // Match new standard card width + gap
 
     nextBtn.addEventListener('click', () => {
         let targetX = drag.x - slideAmount;
