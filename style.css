@@ -1316,10 +1316,15 @@ section {
 }
 
 /* Nav Buttons */
+.testi-nav-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 40px;
+}
+
 .testi-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     width: 54px;
     height: 54px;
     background: rgba(124, 58, 237, 0.1);
@@ -1330,7 +1335,6 @@ section {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 10;
     transition: all 0.3s;
     backdrop-filter: blur(10px);
 }
@@ -1338,15 +1342,8 @@ section {
 .testi-nav:hover {
     background: var(--purple);
     border-color: var(--purple);
-    box-shadow: 0 0 20px rgba(124, 58, 237, 0.4);
-}
-
-.testi-nav.prev {
-    left: -27px;
-}
-
-.testi-nav.next {
-    right: -27px;
+    color: #fff;
+    transform: scale(1.05);
 }
 
 /* ─── PRICING ─── */
