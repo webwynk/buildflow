@@ -153,3 +153,25 @@ document.addEventListener('DOMContentLoaded', () => {
         drag.applyBounds({ minX: minX, maxX: 0 });
     });
 });
+
+// ─── FAQ ACCORDION ───
+document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+        const item = q.parentElement;
+        const isActive = item.classList.contains('active');
+        
+        // Close all other items
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+            otherItem.classList.remove('active');
+            const otherAnswer = otherItem.querySelector('.faq-answer');
+            if (otherAnswer) otherAnswer.style.maxHeight = null;
+        });
+        
+        // Toggle current item
+        if (!isActive) {
+            item.classList.add('active');
+            const answer = item.querySelector('.faq-answer');
+            if (answer) answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+    });
+});
