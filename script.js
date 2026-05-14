@@ -1,8 +1,41 @@
 // ─── NAVBAR SCROLL ───
 const nav = document.getElementById('nav');
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.querySelector('.nav-links');
+
 window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 60);
 });
+
+// ─── MOBILE DRAWER TOGGLE ───
+const mobileDrawer = document.getElementById('mobileDrawer');
+const drawerClose = document.getElementById('drawerClose');
+const drawerOverlay = document.getElementById('drawerOverlay');
+
+if (menuToggle && mobileDrawer) {
+    menuToggle.addEventListener('click', () => {
+        mobileDrawer.classList.add('active');
+        drawerOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+}
+
+const closeDrawer = () => {
+    mobileDrawer.classList.remove('active');
+    drawerOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+};
+
+if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
+if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
+
+// Close drawer when link is clicked
+document.querySelectorAll('.drawer-menu a').forEach(link => {
+    link.addEventListener('click', closeDrawer);
+});
+
+
+
 
 // ─── FADE IN ON SCROLL ───
 const observer = new IntersectionObserver((entries) => {
