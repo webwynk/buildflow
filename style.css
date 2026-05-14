@@ -554,7 +554,7 @@ nav.scrolled {
 
 .hero-sub {
     font-size: clamp(16px, 2vw, 19px);
-    color: var(--muted);
+    color: white;
     max-width: 600px;
     margin: 0 auto 32px;
     line-height: 1.6;
