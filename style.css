@@ -545,6 +545,13 @@ nav.scrolled {
     color: #ffffff;
 }
 
+.gradient-text {
+    background: linear-gradient(90deg, var(--purple), var(--cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 .hero-sub {
     font-size: clamp(16px, 2vw, 19px);
     color: var(--muted);
